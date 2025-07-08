@@ -1,0 +1,14 @@
+.url-generator-section {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.url-generator-section h2 {
+  margin-bottom: 24px;
+}
