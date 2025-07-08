@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testador de APIs - DevKit</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./api-tester.css">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">DevKit</div>
+    <nav class="nav">
+      <i class="nav-icon fas fa-code" data-tool="snippets"></i>
+      <i class="nav-icon fas fa-exchange-alt" data-tool="converter"></i>
+      <i class="nav-icon fas fa-link" data-tool="urls"></i>
+      <i class="nav-icon fas fa-plug active" data-tool="apis"></i>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="api-tester-container">
+      <h1 class="tool-title"><i class="fas fa-plug"></i> Testador de APIs</h1>
+      
+      <div class="request-section">
+        <div class="url-method">
+          <select id="method" class="method-select">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+            <option value="PATCH">PATCH</option>
+          </select>
+          <input type="text" id="apiUrl" class="api-url" placeholder="https://api.exemplo.com/endpoint" />
+        </div>
+        
+        <div class="tabs">
+          <div class="tab-headers">
+            <div class="tab-header active" data-tab="headers">Headers</div>
+            <div class="tab-header" data-tab="body">Body</div>
+            <div class="tab-header" data-tab="params">Params</div>
+          </div>
+          
+          <div class="tab-content active" id="headers-tab">
+            <button id="add-header" class="add-btn"><i class="fas fa-plus"></i> Adicionar Header</button>
+            <div id="headers-container" class="params-container"></div>
+          </div>
+          
+          <div class="tab-content" id="body-tab">
+            <div class="body-format">
+              <select id="body-format" class="format-select">
+                <option value="json">JSON</option>
+                <option value="form">Form Data</option>
+                <option value="text">Text</option>
+              </select>
+            </div>
+            <textarea id="request-body" class="request-body" placeholder='{"chave": "valor"}' spellcheck="false"></textarea>
+          </div>
+          
+          <div class="tab-content" id="params-tab">
+            <button id="add-param" class="add-btn"><i class="fas fa-plus"></i> Adicionar Parâmetro</button>
+            <div id="params-container" class="params-container"></div>
+          </div>
+        </div>
+        
+        <button id="send-request" class="send-btn"><i class="fas fa-paper-plane"></i> Enviar Requisição</button>
+      </div>
+      
+      <div class="response-section">
+        <div class="response-header">
+          <div class="response-status">
+            <span class="status-label">Status:</span>
+            <span id="status-code" class="status-code">-</span>
+          </div>
+          <div class="response-time">
+            <span class="time-label">Tempo:</span>
+            <span id="response-time" class="time-value">-</span>
+          </div>
+        </div>
+        
+        <div class="response-body-container">
+          <h3>Resposta</h3>
+          <pre id="response-body" class="response-body">Nenhuma requisição enviada</pre>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./APITester.js"></script>
+</body>
+</html>
