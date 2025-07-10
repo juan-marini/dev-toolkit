@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Validações | DevKit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="snippets.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">DevKit</div>
+    <nav class="nav">
+      <a href="/index.html"><i class="nav-icon fas fa-home"></i></a>
+      <i class="nav-icon fas fa-code active" data-tool="snippets"></i>
+      <a href="#"><i class="nav-icon fas fa-exchange-alt" data-tool="converter"></i></a>
+      <a href="/src/pages/url-gen/url-generator.html"><i class="nav-icon fas fa-link" data-tool="urls"></i></a>
+      <a href="/src/pages/api-tester/api-tester.html"><i class="nav-icon fas fa-plug" data-tool="apis"></i></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="validation-container">
+      <header class="validation-header">
+        <h1>Gerador de Validações</h1>
+        <p>Gere código de validação para diferentes formatos em várias linguagens.</p>
+      </header>
+
+      <div class="validation-content">
+        <div class="options-section">
+          <div class="option-group">
+            <label>Linguagem:</label>
+            <div class="language-selector">
+              <div class="language-option active" data-lang="javascript">JavaScript</div>
+              <div class="language-option" data-lang="typescript">TypeScript</div>
+              <div class="language-option" data-lang="python">Python</div>
+              <div class="language-option" data-lang="php">PHP</div>
+              <div class="language-option" data-lang="java">Java</div>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <label>Tipo de Validação:</label>
+            <div class="validation-selector">
+              <div class="validation-option active" data-type="cpf">CPF</div>
+              <div class="validation-option" data-type="cnpj">CNPJ</div>
+              <div class="validation-option" data-type="cep">CEP</div>
+              <div class="validation-option" data-type="cel">Celular</div>
+              <div class="validation-option" data-type="rg">RG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-section">
+          <div class="code-header">
+            <span id="code-title">Validação de CPF em JavaScript</span>
+            <button id="copy-btn" class="copy-btn">
+              <i class="fas fa-copy"></i> Copiar
+            </button>
+          </div>
+          <pre id="code-display" class="code-display"><code id="code-content"></code></pre>
+        </div>
+
+        <div class="info-section">
+          <h3>Sobre esta validação</h3>
+          <p id="validation-description">Função para validar números de CPF brasileiros, verificando dígitos verificadores e formato.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="snippets.js"></script>
+</body>
+</html>
