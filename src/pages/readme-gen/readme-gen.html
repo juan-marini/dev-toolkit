@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gerador de README Profissional</title>
+  <link rel="stylesheet" href="readme-gen.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">DevKit</div>
+    <nav class="nav">
+      <a href="#" class="nav-icon active" title="Gerador de README"><i class="fas fa-file-alt"></i></a>
+      <!-- Você pode adicionar outros links aqui -->
+    </nav>
+  </aside>
+
+  <main class="main">
+    <section class="readme-generator-section">
+      <h1>Gerador de README Profissional</h1>
+      <form id="readme-form">
+        <label for="projectName">Nome do Projeto</label>
+        <input type="text" id="projectName" name="projectName" placeholder="Ex: Meu Projeto" required />
+
+        <label for="description">Descrição</label>
+        <textarea id="description" name="description" rows="3" placeholder="Descreva o que o projeto faz" required></textarea>
+
+        <label for="language">Linguagem / Tecnologia</label>
+        <input type="text" id="language" name="language" placeholder="Ex: JavaScript, Python, etc." required />
+
+        <label for="features">Funcionalidades (separe por vírgula)</label>
+        <input type="text" id="features" name="features" placeholder="Ex: Login, Cadastro, Dashboard" />
+
+        <label for="installation">Instruções de Instalação</label>
+        <textarea id="installation" name="installation" rows="3" placeholder="Como instalar o projeto"></textarea>
+
+        <label for="usage">Como Usar</label>
+        <textarea id="usage" name="usage" rows="3" placeholder="Ex: Comandos, exemplos de uso"></textarea>
+
+        <label for="license">Licença</label>
+        <input type="text" id="license" name="license" placeholder="Ex: MIT, GPL, Apache" />
+
+        <label for="authorName">Nome do Autor</label>
+        <input type="text" id="authorName" name="authorName" placeholder="Ex: Juan Marini" />
+
+        <label for="authorLinkedIn">LinkedIn do Autor (URL)</label>
+        <input type="text" id="authorLinkedIn" name="authorLinkedIn" placeholder="Ex: https://www.linkedin.com/in/juan-marini/" />
+
+        <button type="submit" class="card-btn">Gerar README</button>
+      </form>
+
+      <label for="output">README Gerado (Markdown)</label>
+      <textarea id="output" readonly rows="15" placeholder="O README gerado aparecerá aqui..."></textarea>
+      <button id="copy-btn" class="card-btn" type="button">Copiar README</button>
+    </section>
+  </main>
+
+  <script src="readme-gen.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Busca Rápida - DevKit</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="doc-search.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">DevKit</div>
+    <nav class="nav">
+      <a href="/index.html"><i class="nav-icon fas fa-home"></i></a>
+      <a href="/src/pages/code-gen/snippets.html"><i class="nav-icon fas fa-code" data-tool="snippets"></i></a>
+      <i class="nav-icon fas fa-exchange-alt active" data-tool="converter"></i>
+      <a href="/src/pages/url-gen/url-generator.html"><i class="nav-icon fas fa-link" data-tool="urls"></i></a>
+      <a href="/src/pages/api-tester/api-tester.html" class="nav-icon"><i class="fas fa-search"></i></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="card">
+      <h1 class="tool-title"><i class="fas fa-search"></i> Busca Rápida em Documentos</h1>
+
+      <label for="fileInput">Carregar arquivo de texto (.txt):</label>
+      <div class="file-upload-wrapper">
+        <input type="file" id="fileInput" accept=".txt" />
+        <div class="file-upload-btn"><i class="fas fa-upload"></i> Escolher arquivo</div>
+      </div>
+
+      <label for="searchInput">Buscar palavra-chave:</label>
+      <input type="text" id="searchInput" placeholder="Digite a palavra-chave para buscar..." disabled />
+
+      <button id="searchBtn" class="search-btn" disabled><i class="fas fa-magnifying-glass"></i> Buscar</button>
+
+      <div id="results" class="results-section no-results">Nenhum arquivo carregado.</div>
+    </div>
+  </main>
+
+  <script src="doc-search.js"></script>
+    
+</body>
+</html>
